@@ -1,0 +1,31 @@
+﻿@model IEnumerable<mvc_webdev_lab2.Models.Student>
+
+    <h2 class="my-4">Список учеников</h2>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Отчество</th>
+                <th>Группа</th>
+                <th>Телефон</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+            <tr>
+                <td>@student.LastName</td>
+                <td>@student.FirstName</td>
+                <td>@student.MiddleName</td>
+                <td>@student.Group</td>
+                <td>@student.PhoneNumber</td>
+                <td>@student.Email</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" asp-action="Create">Добавить нового ученика</a>
