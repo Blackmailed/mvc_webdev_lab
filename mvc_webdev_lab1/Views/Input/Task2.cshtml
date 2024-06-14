@@ -1,0 +1,18 @@
+﻿@model mvc_webdev_lab1.Models.InputViewModel
+
+<h1>Task 2: Replace Spaces</h1>
+
+<form asp-action="Task2">
+    <div class="form-group">
+        <label asp-for="InputSentence">Enter a sentence:</label>
+        <input asp-for="InputSentence" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Replace Spaces</button>
+</form>
+
+@if (ViewData["ReplacedSentence"] != null)
+{
+    <div>
+        Sentence with spaces replaced: @ViewData["ReplacedSentence"]
+    </div>
+}

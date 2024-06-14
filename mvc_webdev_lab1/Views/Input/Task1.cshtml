@@ -1,0 +1,18 @@
+﻿@model mvc_webdev_lab1.Models.InputViewModel
+
+<h1>Task 1: Count Spaces</h1>
+
+<form asp-action="Task1">
+    <div class="form-group">
+        <label asp-for="InputSentence">Enter a sentence:</label>
+        <input asp-for="InputSentence" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Count Spaces</button>
+</form>
+
+@if (ViewData["SpaceCount"] != null)
+{
+    <div>
+        Number of spaces in the sentence: @ViewData["SpaceCount"]
+    </div>
+}
